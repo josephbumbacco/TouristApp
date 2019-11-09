@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -20,7 +21,7 @@ public class LocationsFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private static final String ARG_PARAM3 = "param3";
 
-    private String mParam1;
+    private int mParam1;
     private String mParam2;
     private String mParam3;
 
@@ -29,10 +30,10 @@ public class LocationsFragment extends Fragment {
         // Required empty public constructor
     }
 
-        public static LocationsFragment newInstance(String param1, String param2, String param3) {
+        public static LocationsFragment newInstance(int param1, String param2, String param3) {
             LocationsFragment fragment = new LocationsFragment();
             Bundle args = new Bundle();
-            args.putString(ARG_PARAM1, param1);
+            args.putInt(ARG_PARAM1, param1);
             args.putString(ARG_PARAM2, param2);
             args.putString(ARG_PARAM3, param3);
             fragment.setArguments(args);
@@ -43,7 +44,7 @@ public class LocationsFragment extends Fragment {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             if (getArguments() != null) {
-                mParam1 = getArguments().getString(ARG_PARAM1);
+                mParam1 = getArguments().getInt(ARG_PARAM1);
                 mParam2 = getArguments().getString(ARG_PARAM2);
                 mParam3 = getArguments().getString(ARG_PARAM3);
             }
@@ -54,9 +55,9 @@ public class LocationsFragment extends Fragment {
                 Bundle savedInstanceState) {
             // Inflate the layout for this fragment
             View view = inflater.inflate(R.layout.fragment_locations, container, false);
-            TextView imagePlaceHolder = view.findViewById(R.id.centerText);
-            if (mParam1 != null) {
-                imagePlaceHolder.setText(mParam1);
+            ImageView imagePlaceHolder = view.findViewById(R.id.locationImage);
+            if (mParam1 != 0) {
+                imagePlaceHolder.setImageResource(mParam1);
             }
 
             TextView locationName = view.findViewById(R.id.locationName);
