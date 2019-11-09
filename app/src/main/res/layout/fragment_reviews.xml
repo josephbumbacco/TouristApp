@@ -3,4 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReviewsFragment"/>
+    android:background="@android:color/holo_red_dark"
+    android:orientation="vertical"
+    tools:context=".ReviewsFragment">
+
+    <ListView
+        android:id="@+id/locationsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
