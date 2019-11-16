@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_red_dark"
+    android:orientation="vertical"
     tools:context=".LocationsFragment">
+
+    <TextView
+        android:id="@+id/locationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:gravity="center|top"
+        android:text="locationName1"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/locationDetails"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:fontFamily="serif"
         android:gravity="center|top"
         android:paddingTop="30dp"
@@ -19,22 +31,12 @@
         android:textSize="24sp"
         android:textStyle="italic" />
 
-    <TextView
-        android:id="@+id/locationName"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fontFamily="serif"
-        android:gravity="center|top"
-        android:text="locationName1"
-        android:textColor="@android:color/background_dark"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
     <ImageView
         android:id="@+id/locationImage"
-        android:layout_width="800dp"
-        android:layout_height="1000dp"
-        android:layout_gravity="center"
-        android:src="@drawable/city1"
-        app:srcCompat="@drawable/city1" />
-</FrameLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:src="@drawable/city1" />
+
+</LinearLayout>

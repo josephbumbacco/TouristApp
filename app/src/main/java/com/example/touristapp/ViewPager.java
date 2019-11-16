@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -30,6 +31,13 @@ public class ViewPager extends Fragment {
         androidx.viewpager.widget.ViewPager pager = view.findViewById(R.id.locationViewPager);
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
         pager.setAdapter(adapter);
+
+        view.findViewById(R.id.mapButton).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         // Inflate the layout for this fragment
         return view;
     }
