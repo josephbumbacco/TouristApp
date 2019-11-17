@@ -37,6 +37,8 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:cropToPadding="false"
-        android:src="@drawable/city1" />
+        android:src="@drawable/bridge"
+        app:srcCompat="@drawable/bridge"
+        tools:srcCompat="@drawable/bridge" />
 
 </LinearLayout>

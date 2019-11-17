@@ -69,6 +69,10 @@ public class LocationsFragment extends Fragment {
             if (mParam3 != null) {
                 locationDetails.setText(mParam3);
             }
+
+
+
+
             return view;
 
         }

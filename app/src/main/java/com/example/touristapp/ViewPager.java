@@ -1,6 +1,8 @@
 package com.example.touristapp;
 
 
+import android.content.Intent;
+
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -27,12 +29,21 @@ import android.widget.Toast;
  */
 public class ViewPager extends Fragment {
 
+
+
+    public static String geoCoordinate;
+
     public static final int PERMISSION_ACCESS_FINE_LOCATION = 1;
 
 
     public ViewPager() {
         // Required empty public constructor
     }
+
+    public String getGeoCoordinate() {
+        return geoCoordinate;
+    }
+
 
 
     @Override
@@ -100,22 +111,25 @@ public class ViewPager extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return LocationsFragment.newInstance(R.drawable.city1, "Chicago", "Description1");
-                case 1: return LocationsFragment.newInstance(R.drawable.city2,"Rome","Description2");
-                case 2: return LocationsFragment.newInstance(R.drawable.city3,"Greece", "Description3");
-                case 3: return LocationsFragment.newInstance(R.drawable.city1,"Spain","Description4");
-                case 4: return LocationsFragment.newInstance(R.drawable.city2,"Rio","Description5" );
-                case 5: return LocationsFragment.newInstance(R.drawable.city3,"Japan", "Description6");
-                case 6: return LocationsFragment.newInstance(R.drawable.city2,"China","Description7");
-                case 7: return LocationsFragment.newInstance(R.drawable.city1,"Canada","Description8");
+                case 0: geoCoordinate ="google.navigation:q=42.311065, -83.068843&mode=w"; return LocationsFragment.newInstance(R.drawable.bridge
+                        , "Ambassador Bridge"
+                        , "The Ambassador Bridge is a suspension bridge which connects Detroit, MI to Windsor, ON. The bridge spans the Hudson River, and is a total of 7,490 feet long");
+                case 1: geoCoordinate ="google.navigation:q=42.295257, -83.022749&mode=w"; return LocationsFragment.newInstance(R.drawable.jacksonpark
+                        ,"Jackson Park"
+                        ,"Jackson Park is a park which contains many  Memorials including both a World War II and Korean War Memorial. Jackson park also contains a wide variety of plants and vegetation");
+                case 2: geoCoordinate ="google.navigation:q=42.319895, -83.041199&mode=w"; return LocationsFragment.newInstance(R.drawable.gardens
+                        ,"Dieppe Gardens"
+                        , "Dieppe Garden is a riverfront park containing many Memorials to the Essex-Kent Scottish Regiment.");
+                case 3: geoCoordinate ="google.navigation:q=42.317968, -83.009958&mode=w"; return LocationsFragment.newInstance(R.drawable.willistead
+                        ,"Willistead Park"
+                        ,"Willistead Park is a park located in the Walkerville area of Windsor. This park contains over 300 trees, including Windsor's only persimmon, a tree native to the southern United States.");
 
-
-                default: return LocationsFragment.newInstance(R.drawable.city1,"ERROR", "ERROR");
+                default: return LocationsFragment.newInstance(R.drawable.bridge,"ERROR", "ERROR");
             }
         }
         @Override
         public int getCount() {
-            return 7;
+            return 4;
         }
     }
 }

@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 
             case ViewPager.PERMISSION_ACCESS_FINE_LOCATION:
                 if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    Uri location = Uri.parse(geoCoordinate);
+                    Uri location = Uri.parse(ViewPager.geoCoordinate);
                     Intent intent = new Intent(Intent.ACTION_VIEW);
                     intent.setPackage("com.google.android.apps.maps");
 
