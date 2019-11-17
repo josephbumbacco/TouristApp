@@ -36,7 +36,7 @@
         android:adjustViewBounds="true"
         android:cropToPadding="true"
         android:paddingTop="10dp"
-        app:srcCompat="@drawable/city1" />
+        app:srcCompat="@drawable/bridge" />
 
     <TextView
         android:id="@+id/bottomText"
