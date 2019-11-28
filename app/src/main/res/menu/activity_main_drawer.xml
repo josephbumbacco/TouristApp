@@ -12,6 +12,11 @@
             android:id="@+id/nav_reviews"
             android:icon="@android:drawable/ic_menu_help"
             android:title="Reviews" />
+
+        <item
+            android:id="@+id/nav_random_location"
+            android:icon="@android:drawable/ic_menu_help"
+            android:title="Go somewhere new" />
     </group>
 
 </menu>

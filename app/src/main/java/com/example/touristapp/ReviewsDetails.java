@@ -32,10 +32,13 @@ public class ReviewsDetails extends Fragment {
 
     public static String geoLocation;
 
+    public static TextView locationName;
+    public static TextView locationDesc;
+    public static ImageView locationImage;
+
     public ReviewsDetails() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,10 +46,10 @@ public class ReviewsDetails extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_reviews_details, container, false);
 
-       TextView locationName = view.findViewById(R.id.textObj1);
-       TextView locationDesc = view.findViewById(R.id.textObj2);
+        locationName = view.findViewById(R.id.textObj1);
+        locationDesc = view.findViewById(R.id.textObj2);
 
-       ImageView locationImage = view.findViewById(R.id.imageObj);
+        locationImage = view.findViewById(R.id.imageObj);
 
 
        locationImage.setOnClickListener(new View.OnClickListener(){
