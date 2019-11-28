@@ -20,36 +20,22 @@ public class LocationsFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private static final String ARG_PARAM3 = "param3";
-    private static final String ARG_PARAM4 = "param4";
-
-    public static String geoLocation;
 
     private int mParam1;
     private String mParam2;
     private String mParam3;
-
-    public String getmParam4() {
-        return mParam4;
-    }
-
-    public void setmParam4(String mParam4) {
-        this.mParam4 = mParam4;
-    }
-
-    public String mParam4;
 
 
     public LocationsFragment() {
         // Required empty public constructor
     }
 
-        public static LocationsFragment newInstance(int param1, String param2, String param3, String param4) {
+        public static LocationsFragment newInstance(int param1, String param2, String param3) {
             LocationsFragment fragment = new LocationsFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_PARAM1, param1);
             args.putString(ARG_PARAM2, param2);
             args.putString(ARG_PARAM3, param3);
-            args.putString(ARG_PARAM4, param4);
             fragment.setArguments(args);
             return fragment;
         }
@@ -61,7 +47,6 @@ public class LocationsFragment extends Fragment {
                 mParam1 = getArguments().getInt(ARG_PARAM1);
                 mParam2 = getArguments().getString(ARG_PARAM2);
                 mParam3 = getArguments().getString(ARG_PARAM3);
-                mParam4 = getArguments().getString(ARG_PARAM4);
             }
         }
 
@@ -88,7 +73,6 @@ public class LocationsFragment extends Fragment {
                 locationDetails.setText(mParam3);
             }
 
-            geoLocation = getmParam4();
 
             return view;
         }

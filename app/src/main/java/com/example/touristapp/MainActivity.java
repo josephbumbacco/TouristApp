@@ -27,8 +27,6 @@ import android.view.Menu;
 import android.widget.Toast;
 
 
-import static com.example.touristapp.LocationsFragment.geoLocation;
-
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -82,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
             case ViewPager.PERMISSION_ACCESS_FINE_LOCATION:
                 if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    Uri location = Uri.parse(geoLocation);
+                    Uri location = Uri.parse(ReviewsDetails.geoLocation);
                     Intent intent = new Intent(Intent.ACTION_VIEW, location);
                     intent.setPackage("com.google.android.apps.maps");
 
