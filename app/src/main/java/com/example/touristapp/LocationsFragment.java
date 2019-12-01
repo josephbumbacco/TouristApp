@@ -56,6 +56,9 @@ public class LocationsFragment extends Fragment {
             // Inflate the layout for this fragment
             View view = inflater.inflate(R.layout.fragment_locations, container, false);
             ImageView imagePlaceHolder = view.findViewById(R.id.locationImage);
+
+
+
             if (mParam1 != 0) {
                 imagePlaceHolder.setImageResource(mParam1);
             }
@@ -71,10 +74,6 @@ public class LocationsFragment extends Fragment {
             }
 
 
-
-
             return view;
-
         }
-
     }

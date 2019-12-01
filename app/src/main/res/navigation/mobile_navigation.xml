@@ -15,6 +15,21 @@
         android:id="@+id/nav_reviews"
         android:name="com.example.touristapp.ReviewsFragment"
         android:label="Reviews"
-        tools:layout="@layout/fragment_reviews" />
+        tools:layout="@layout/fragment_reviews" >
+        <action
+            android:id="@+id/action_nav_reviews_to_reviewsDetails"
+            app:destination="@id/reviewsDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reviewsDetails"
+        android:name="com.example.touristapp.ReviewsDetails"
+        android:label="Reviews"
+        tools:layout="@layout/fragment_reviews_details" />
+    <fragment
+        android:id="@+id/nav_random_location"
+        android:name="com.example.touristapp.RandomLocation"
+        android:label="fragment_random_location"
+        tools:layout="@layout/fragment_random_location" />
 
 </navigation>
