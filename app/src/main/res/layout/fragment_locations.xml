@@ -1,40 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_red_dark"
+    android:background="@android:color/background_dark"
+    android:orientation="vertical"
     tools:context=".LocationsFragment">
-
-    <TextView
-        android:id="@+id/locationDetails"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fontFamily="serif"
-        android:gravity="center|top"
-        android:paddingTop="30dp"
-        android:text="infoDetail1"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/locationName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
         android:fontFamily="serif"
         android:gravity="center|top"
+        android:paddingTop="100px"
+        android:paddingBottom="10px"
         android:text="locationName1"
-        android:textColor="@android:color/background_dark"
-        android:textSize="30sp"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/locationDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:fontFamily="serif"
+        android:gravity="center|top"
+        android:paddingBottom="50px"
+        android:text="infoDetail1"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="italic" />
 
     <ImageView
         android:id="@+id/locationImage"
-        android:layout_width="800dp"
-        android:layout_height="1000dp"
-        android:layout_gravity="center"
-        android:src="@drawable/city1"
-        app:srcCompat="@drawable/city1" />
-</FrameLayout>
+        android:layout_width="1500px"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:src="@drawable/bridge"
+        app:srcCompat="@drawable/bridge"
+        tools:srcCompat="@drawable/bridge" />
+
+</LinearLayout>

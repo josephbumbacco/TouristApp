@@ -2,18 +2,38 @@ package com.example.touristapp;
 
 public class Locations {
     private String locationName;
-    private String locationDetails;
 
-    private String locationRating;
+    private int locationImage;
+
+    private int ratingImage;
 
 
     public Locations(){
     }
 
-    public Locations(String locationName, String locationDetails, String locationRating) {
+
+
+
+    public Locations(String locationName, int locationImage, int ratingImage) {
         this.locationName = locationName;
-        this.locationDetails = locationDetails;
-        this.locationRating = locationRating;
+        this.locationImage = locationImage;
+        this.ratingImage = ratingImage;
+    }
+
+    public int getRatingImage() {
+        return ratingImage;
+    }
+
+    public void setRatingImage(int ratingImage) {
+        this.ratingImage = ratingImage;
+    }
+
+    public int getLocationImage() {
+        return locationImage;
+    }
+
+    public void setLocationImage(int locationImage) {
+        this.locationImage = locationImage;
     }
 
     public String getLocationName() {
@@ -24,21 +44,6 @@ public class Locations {
         this.locationName = locationName;
     }
 
-    public String getLocationDetails() {
-        return locationDetails;
-    }
-
-    public void setLocationDetails(String locationDetails) {
-        this.locationDetails = locationDetails;
-    }
-
-    public String getLocationRating() {
-        return locationRating;
-    }
-
-    public void setLocationRating(String locationRating) {
-        this.locationRating = locationRating;
-    }
 
     public String toString() {
         return this.locationName;

@@ -30,6 +30,8 @@ public class LocationsFragment extends Fragment {
         // Required empty public constructor
     }
 
+
+
         public static LocationsFragment newInstance(int param1, String param2, String param3) {
             LocationsFragment fragment = new LocationsFragment();
             Bundle args = new Bundle();
@@ -56,6 +58,9 @@ public class LocationsFragment extends Fragment {
             // Inflate the layout for this fragment
             View view = inflater.inflate(R.layout.fragment_locations, container, false);
             ImageView imagePlaceHolder = view.findViewById(R.id.locationImage);
+
+
+
             if (mParam1 != 0) {
                 imagePlaceHolder.setImageResource(mParam1);
             }
@@ -69,8 +74,8 @@ public class LocationsFragment extends Fragment {
             if (mParam3 != null) {
                 locationDetails.setText(mParam3);
             }
+
+
             return view;
-
         }
-
     }
