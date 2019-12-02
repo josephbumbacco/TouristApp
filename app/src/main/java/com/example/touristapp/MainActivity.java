@@ -1,5 +1,6 @@
 package com.example.touristapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -8,9 +9,12 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.provider.ContactsContract;
+import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.view.menu.MenuBuilder;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -37,14 +41,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -58,11 +54,33 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+    /**
+     * Method inflates the options menu and includes the icons for each overflow action
+     * @param menu
+     *
+     */
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        if(menu instanceof MenuBuilder){
+            MenuBuilder m = (MenuBuilder) menu;
+            m.setOptionalIconsVisible(true);
+        }
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        if(id == R.id.action_settings) {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -78,15 +96,15 @@ public class MainActivity extends AppCompatActivity {
                                            @NonNull int[] grantResults) {
         switch(requestCode) {
 
-            case ViewPager.PERMISSION_ACCESS_FINE_LOCATION:
-                if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
+            case ViewPager.PERMISSION_ACCESS_FINE_LOCATION: {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Uri location = Uri.parse(ReviewsDetails.geoLocation);
                     Intent intent = new Intent(Intent.ACTION_VIEW, location);
                     intent.setPackage("com.google.android.apps.maps");
 
-                    if(intent.resolveActivity(getPackageManager()) != null){
+                    if (intent.resolveActivity(getPackageManager()) != null) {
                         startActivity(intent);
-                    }else{
+                    } else {
                         Toast.makeText(MainActivity.this, "Cannot find any eligible software to perform this task", Toast.LENGTH_SHORT).show();
                     }
                 } else {
@@ -94,6 +112,45 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 break;
+            }
+            case AboutFragment.PERMISSION_SEND_SMS: {
+                if (grantResults.length > 0 && (grantResults[0] ==
+                        PackageManager.PERMISSION_GRANTED)) {
+                    Intent intent = new Intent(Intent.ACTION_SENDTO);
+                    intent.setData(Uri.parse("smsto:"));
+                    intent.putExtra("sms_body", "Hello, I have a question I'd like answered: ");
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Cannot find any eligible software to perform this task", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    //disable button
+
+                }
+                break;
+            }
+            case AboutFragment.PERMISSION_INSERT: {
+                if (grantResults.length > 0 && (grantResults[0] ==
+                        PackageManager.PERMISSION_GRANTED)) {
+                    Intent intent = new Intent(Intent.ACTION_INSERT);
+                    intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
+                    intent.putExtra(ContactsContract.Intents.Insert.NAME, AboutFragment.name);
+                    intent.putExtra(ContactsContract.Intents.Insert.EMAIL, AboutFragment.email);
+                    intent.putExtra(ContactsContract.Intents.Insert.PHONE, AboutFragment.phone);
+
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Cannot find any eligible software to perform this task", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    //disable button
+
+                }
+                break;
+            }
+
         }
     }
 }
