@@ -50,7 +50,14 @@ public class ViewPager extends Fragment {
         return view;
     }
 
-
+    /**
+     *  Creating a Viewpager with
+     * @param locationName
+     * @param locationImage
+     * @param locationDetails
+     *
+     *
+     */
     public class CustomViewPagerAdapter extends FragmentPagerAdapter {
         public CustomViewPagerAdapter(FragmentManager fm) {
             super(fm);
