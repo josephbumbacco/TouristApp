@@ -42,10 +42,10 @@ public class ReviewsFragment extends Fragment {
         listView = view.findViewById(R.id.locationsList);
 
         final ArrayList<Locations> locations = new ArrayList<>();
-        locations.add(new Locations("Ambassador Bridge","2/5", R.drawable.bridge));
-        locations.add(new Locations("Jackson Park","4/5", R.drawable.jacksonpark));
-        locations.add(new Locations("Dieppe Gardens","3/5", R.drawable.gardens));
-        locations.add(new Locations("Willistead Park","5/5", R.drawable.willistead));
+        locations.add(new Locations("Ambassador Bridge", R.drawable.bridge, R.drawable.stars2));
+        locations.add(new Locations("Jackson Park", R.drawable.jacksonpark, R.drawable.stars4));
+        locations.add(new Locations("Dieppe Gardens", R.drawable.gardens, R.drawable.stars3));
+        locations.add(new Locations("Willistead Park", R.drawable.willistead, R.drawable.stars4andhalf));
 
         //ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, locations);
 
@@ -74,11 +74,11 @@ public class ReviewsFragment extends Fragment {
             final TextView locationName = convertView.findViewById(R.id.topText);
             locationName.setText(item.getLocationName());
 
-            TextView locationRating = convertView.findViewById(R.id.bottomText);
-            locationRating.setText(item.getLocationRating());
-
             ImageView locationImage = convertView.findViewById(R.id.locationImage);
             locationImage.setImageResource(item.getLocationImage());
+
+            ImageView ratingImage = convertView.findViewById(R.id.ratingImage);
+            ratingImage.setImageResource(item.getRatingImage());
 
 
             convertView.findViewById(R.id.locationImage).setOnClickListener(new View.OnClickListener() {

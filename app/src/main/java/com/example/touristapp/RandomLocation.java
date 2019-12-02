@@ -41,6 +41,7 @@ public class RandomLocation extends Fragment {
     public static TextView locationName;
     public static TextView locationDesc;
     public static ImageView locationImage;
+    public static ImageView ratingImage2;
 
     public RandomLocation() {
         // Required empty public constructor
@@ -59,7 +60,7 @@ public class RandomLocation extends Fragment {
         locationDesc = view.findViewById(R.id.textObj2);
 
         locationImage = view.findViewById(R.id.imageObj);
-
+        ratingImage2 = view.findViewById(R.id.ratingImage2);
 
         locationImage.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -115,6 +116,7 @@ public class RandomLocation extends Fragment {
                 locationName.setText("Ambassador Bridge");
                 locationDesc.setText("The Ambassador Bridge is a suspension bridge which connects Detroit, MI to Windsor, ON. The bridge spans the Hudson River, and is a total of 7,490 feet long");
                 locationImage.setImageResource(R.drawable.bridge);
+                ratingImage2.setImageResource(R.drawable.stars2);
                 geoLocation = "google.navigation:q=42.311065, -83.068843&mode=w";
                 break;
 
@@ -123,6 +125,7 @@ public class RandomLocation extends Fragment {
                 locationName.setText("Jackson Park");
                 locationDesc.setText("Jackson Park is a park which contains many  Memorials including both a World War II and Korean War Memorial. Jackson park also contains a wide variety of plants and vegetation");
                 locationImage.setImageResource(R.drawable.jacksonpark);
+                ratingImage2.setImageResource(R.drawable.stars4);
                 geoLocation = "google.navigation:q=42.295257, -83.022749&mode=w";
                 break;
 
@@ -130,6 +133,7 @@ public class RandomLocation extends Fragment {
                 locationName.setText("Dieppe Gardens");
                 locationDesc.setText("Dieppe Garden is a riverfront park containing many Memorials to the Essex-Kent Scottish Regiment.");
                 locationImage.setImageResource(R.drawable.gardens);
+                ratingImage2.setImageResource(R.drawable.stars3);
                 geoLocation = "google.navigation:q=42.319895, -83.041199&mode=w";
                 break;
 
@@ -137,6 +141,7 @@ public class RandomLocation extends Fragment {
                 locationName.setText("Willistead Park");
                 locationDesc.setText("Willistead Park is a park located in the Walkerville area of Windsor. This park contains over 300 trees, including Windsor's only persimmon, a tree native to the southern United States.");
                 locationImage.setImageResource(R.drawable.willistead);
+                ratingImage2.setImageResource(R.drawable.stars4andhalf);
                 geoLocation = "google.navigation:q=42.317968, -83.009958&mode=w";
                 break;
 
