@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".AboutFragment">
+
+    <TextView
+        android:id="@+id/contactTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/alegreya_sc"
+        android:gravity="center"
+        android:paddingTop="50px"
+        android:paddingBottom="50px"
+        android:text="@string/contactText"
+        android:textColor="@color/colorAccent"
+        android:textColorLink="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/emailButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="@string/emailText" />
+
+    <Button
+        android:id="@+id/phoneButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="@string/phoneText" />
+
+    <Button
+        android:id="@+id/callButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="@string/callText" />
+
+    <Button
+        android:id="@+id/addContactButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="@string/addContactText" />
+
+    <TextView
+        android:id="@+id/supportText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sc"
+        android:gravity="center"
+        android:paddingTop="50px"
+        android:paddingBottom="50px"
+        android:text="@string/supportText"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/webButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="@string/webText" />
+
+    <Button
+        android:id="@+id/socialButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="@string/socialText" />
+
+    <TextView
+        android:id="@+id/contactTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sc"
+        android:gravity="center"
+        android:paddingTop="50px"
+        android:paddingBottom="50px"
+        android:text="@string/creditsText"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/creditsRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

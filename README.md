@@ -22,4 +22,4 @@ This app allows users to either choose, or randomly find a popular location loca
 | Name             | Github                                              |                           Email     |
 | -------------    | --------------------------------------------------- | ----------------------------------- |
 | Joe Bumbacco     | [josephbumbacco](https://github.com/josephbumbacco) | joseph.bumbacco01@stclairconnect.ca |
-
+| Drew Brooks      | [drewbrooks](https://github.com/DrewBrooks)         | w0726128@myscc.ca                   |

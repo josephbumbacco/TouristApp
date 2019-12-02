@@ -6,17 +6,22 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_viewpager"
-            android:icon="@android:drawable/ic_menu_help"
-            android:title="ViewPager" />
+            android:icon="@drawable/ic_landscape_black_24dp"
+            android:title="@string/locationsText" />
         <item
             android:id="@+id/nav_reviews"
-            android:icon="@android:drawable/ic_menu_help"
-            android:title="Reviews" />
+            android:icon="@drawable/ic_mood_black_24dp"
+            android:title="@string/reviewsText" />
 
         <item
             android:id="@+id/nav_random_location"
-            android:icon="@android:drawable/ic_menu_help"
-            android:title="Go somewhere new" />
+            android:icon="@drawable/ic_directions_bike_black_24dp"
+            android:title="@string/randomText" />
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_outline_black_24dp"
+            android:title="@string/About" />
     </group>
 
 </menu>

@@ -12,8 +12,13 @@ public class Locations {
     }
 
 
-
-
+    /** Constructor for Locations items
+     *
+     * @author Joe Bumbacco
+     * @param locationName
+     * @param locationImage
+     * @param ratingImage
+     */
     public Locations(String locationName, int locationImage, int ratingImage) {
         this.locationName = locationName;
         this.locationImage = locationImage;

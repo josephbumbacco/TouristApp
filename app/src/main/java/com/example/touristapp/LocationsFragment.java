@@ -31,7 +31,14 @@ public class LocationsFragment extends Fragment {
     }
 
 
-
+    /** Taking args from the viewpager switch statement
+     *
+     * @author Joe Bumbacco
+     * @param param1
+     * @param param2
+     * @param param3
+     * @return
+     */
         public static LocationsFragment newInstance(int param1, String param2, String param3) {
             LocationsFragment fragment = new LocationsFragment();
             Bundle args = new Bundle();
@@ -42,7 +49,12 @@ public class LocationsFragment extends Fragment {
             return fragment;
         }
 
-        @Override
+
+    /** Storing arguments in mParam
+     *
+     * @param savedInstanceState
+     */
+    @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             if (getArguments() != null) {
@@ -53,6 +65,10 @@ public class LocationsFragment extends Fragment {
         }
 
         @Override
+
+        /**
+         * Adding mParams to imagePlaceHolder, locationName, locationDetails
+         */
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
             // Inflate the layout for this fragment

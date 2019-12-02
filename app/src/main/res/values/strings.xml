@@ -14,10 +14,25 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+    <string name="random_location">Somewhere New</string>
+
 
     <string name="random_button">Go somewhere new</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="mapButtonText">Go to this location</string>
+    <string name="About">About Us</string>
+    <string name="contactText">Contact the Creators</string>
+    <string name="creditsText">Credits</string>
+    <string name="emailText">Send us an email!</string>
+    <string name="phoneText">Send us a message!</string>
+    <string name="callText">Call our support</string>
+    <string name="addContactText">Add us as a contact!</string>
+    <string name="supportText">Support us!</string>
+    <string name="webText">Our base of operations!</string>
+    <string name="socialText">Tweet our name out!</string>
+    <string name="locationsText">Locations</string>
+    <string name="reviewsText">Reviews</string>
+    <string name="randomText">Go somewhere new!</string>
 </resources>
