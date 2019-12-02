@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/topText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="top|left"
         android:layout_weight="0"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/alegreya_sans"
@@ -17,12 +17,14 @@
         android:text="topLeftText"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/bottomText"
+    <ImageView
+        android:id="@+id/ratingImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100px"
+        android:layout_gravity="center"
         android:layout_weight="0"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/alegreya_sans"
@@ -32,6 +34,8 @@
         android:textColor="@android:color/background_light"
         android:textSize="14sp"
         android:textStyle="bold" />
+    app:srcCompat="@drawable/stars0" />
+
 
     <ImageView
         android:id="@+id/locationImage"
@@ -39,8 +43,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:adjustViewBounds="true"
-        android:background="@android:color/background_dark"
+        android:background="@color/colorPrimary"
         android:cropToPadding="false"
+        android:paddingBottom="100px"
         app:srcCompat="@drawable/bridge" />
 
 </LinearLayout>

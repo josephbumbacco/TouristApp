@@ -18,7 +18,11 @@
         tools:layout="@layout/fragment_reviews" >
         <action
             android:id="@+id/action_nav_reviews_to_reviewsDetails"
-            app:destination="@id/reviewsDetails" />
+            app:destination="@id/reviewsDetails"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_back_in"
+            app:popExitAnim="@anim/slide_back_out" />
     </fragment>
 
     <fragment
