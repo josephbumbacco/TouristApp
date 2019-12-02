@@ -6,15 +6,15 @@ This app allows users to either choose, or randomly find a popular location loca
 
 ## Mockup
 
-![Map Screen](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/Map%20Screen.png)
-</br>
 ![Navigation](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/MenuScreen.png)
 </br>
-![Review Detail](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/Reviews%20Detail.png)
+![ViewPager Screen](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/ViewPagerScreen.png)
 </br>
 ![Reviews](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/Reviews%20Screen.png)
 </br>
-![ViewPager Screen](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/ViewPagerScreen.png)
+![Review Detail](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/Reviews%20Detail.png)
+</br>
+![Map Screen](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/Map%20Screen.png)
 </br>
 
 ## Authors
