@@ -7,16 +7,27 @@ public class Locations {
 
     private int locationImage;
 
+    private int ratingImage;
+
 
     public Locations(){
     }
 
 
 
-    public Locations(String locationName, String locationRating, int locationImage) {
+
+    public Locations(String locationName, int locationImage, int ratingImage) {
         this.locationName = locationName;
-        this.locationRating = locationRating;
         this.locationImage = locationImage;
+        this.ratingImage = ratingImage;
+    }
+
+    public int getRatingImage() {
+        return ratingImage;
+    }
+
+    public void setRatingImage(int ratingImage) {
+        this.ratingImage = ratingImage;
     }
 
     public int getLocationImage() {
@@ -35,15 +46,6 @@ public class Locations {
         this.locationName = locationName;
     }
 
-
-
-    public String getLocationRating() {
-        return locationRating;
-    }
-
-    public void setLocationRating(String locationRating) {
-        this.locationRating = locationRating;
-    }
 
     public String toString() {
         return this.locationName;

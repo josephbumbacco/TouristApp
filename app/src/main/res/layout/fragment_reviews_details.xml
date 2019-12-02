@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_red_dark"
+    android:background="@android:color/black"
     android:orientation="vertical"
     tools:context=".ReviewsDetails">
 
@@ -33,10 +33,19 @@
     <TextView
         android:id="@+id/textObj2"
         android:layout_width="match_parent"
-        android:layout_height="1200px"
+        android:layout_height="wrap_content"
         android:layout_weight="0"
         android:text="locationDesc"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/ratingImage2"
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_weight="0"
+        android:adjustViewBounds="true"
+        android:src="@drawable/stars0" />
 
 </LinearLayout>
