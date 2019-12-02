@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/nav_viewpager"
         android:name="com.example.touristapp.ViewPager"
-        android:label="ViewPager"
+        android:label="Locations"
         tools:layout="@layout/fragment_view_pager" />
 
     <fragment
@@ -33,12 +33,12 @@
     <fragment
         android:id="@+id/nav_random_location"
         android:name="com.example.touristapp.RandomLocation"
-        android:label="fragment_random_location"
+        android:label="@string/random_location"
         tools:layout="@layout/fragment_random_location" />
     <fragment
-        android:id="@+id/aboutFragment"
+        android:id="@+id/nav_about"
         android:name="com.example.touristapp.AboutFragment"
-        android:label="fragment_about"
+        android:label="@string/About"
         tools:layout="@layout/fragment_about" />
 
 </navigation>

@@ -108,8 +108,10 @@ public class RandomLocation extends Fragment {
             }
         });
 
+        //Random Number which generates between 1-4
         int randomNumber = new Random().nextInt(4)+1;
 
+        //Switch which utilizes the random number
         switch (randomNumber){
 
             case 1:
