@@ -3,8 +3,6 @@ package com.example.touristapp;
 public class Locations {
     private String locationName;
 
-    private String locationRating;
-
     private int locationImage;
 
     private int ratingImage;

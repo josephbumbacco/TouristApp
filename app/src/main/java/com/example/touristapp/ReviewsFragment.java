@@ -41,6 +41,14 @@ public class ReviewsFragment extends Fragment {
 
         listView = view.findViewById(R.id.locationsList);
 
+        /**
+         * Creating a listview with params
+         *
+         * @param locationName
+         * @param locationImage
+         * @param locationRating
+         */
+
         final ArrayList<Locations> locations = new ArrayList<>();
         locations.add(new Locations("Ambassador Bridge", R.drawable.bridge, R.drawable.stars2));
         locations.add(new Locations("Jackson Park", R.drawable.jacksonpark, R.drawable.stars4));
@@ -63,6 +71,7 @@ public class ReviewsFragment extends Fragment {
 
         @NonNull
         @Override
+
 
         public View getView(int position, View convertView, ViewGroup parent) {
             final Locations item = getItem(position);
@@ -88,6 +97,7 @@ public class ReviewsFragment extends Fragment {
 
                         case "Ambassador Bridge":
                             locationNumber = 1;
+
                             Navigation.findNavController(listView).navigate(R.id.action_nav_reviews_to_reviewsDetails);
                             break;
 

@@ -30,6 +30,8 @@ public class LocationsFragment extends Fragment {
         // Required empty public constructor
     }
 
+
+
         public static LocationsFragment newInstance(int param1, String param2, String param3) {
             LocationsFragment fragment = new LocationsFragment();
             Bundle args = new Bundle();
