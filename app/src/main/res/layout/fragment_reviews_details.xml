@@ -15,7 +15,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_weight="0"
         android:adjustViewBounds="true"
-        android:background="@android:color/background_dark"
+        android:background="@color/colorPrimary"
         android:src="@drawable/bridge"
         app:srcCompat="@drawable/gardens" />
 
@@ -24,7 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:background="@android:color/black"
+        android:background="@color/colorPrimaryDark"
+        android:fontFamily="@font/alegreya_sc"
         android:text="locationName"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
@@ -35,6 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="1200px"
         android:layout_weight="0"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/alegreya_sans"
         android:text="locationDesc"
         android:textColor="@android:color/black"
         android:textSize="24sp" />

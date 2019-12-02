@@ -9,6 +9,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -74,11 +75,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-        if(id == R.id.action_settings){
+        if(id == R.id.action_settings) {
             Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
-        }else if(id == R.id.action_about){
-//            Intent intent = new Intent(MainActivity.this, )
         }
 
         return super.onOptionsItemSelected(item);
@@ -97,15 +96,15 @@ public class MainActivity extends AppCompatActivity {
                                            @NonNull int[] grantResults) {
         switch(requestCode) {
 
-            case ViewPager.PERMISSION_ACCESS_FINE_LOCATION:
-                if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
+            case ViewPager.PERMISSION_ACCESS_FINE_LOCATION: {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Uri location = Uri.parse(ReviewsDetails.geoLocation);
                     Intent intent = new Intent(Intent.ACTION_VIEW, location);
                     intent.setPackage("com.google.android.apps.maps");
 
-                    if(intent.resolveActivity(getPackageManager()) != null){
+                    if (intent.resolveActivity(getPackageManager()) != null) {
                         startActivity(intent);
-                    }else{
+                    } else {
                         Toast.makeText(MainActivity.this, "Cannot find any eligible software to perform this task", Toast.LENGTH_SHORT).show();
                     }
                 } else {
@@ -113,6 +112,45 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 break;
+            }
+            case AboutFragment.PERMISSION_SEND_SMS: {
+                if (grantResults.length > 0 && (grantResults[0] ==
+                        PackageManager.PERMISSION_GRANTED)) {
+                    Intent intent = new Intent(Intent.ACTION_SENDTO);
+                    intent.setData(Uri.parse("smsto:"));
+                    intent.putExtra("sms_body", "Hello, I have a question I'd like answered: ");
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Cannot find any eligible software to perform this task", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    //disable button
+
+                }
+                break;
+            }
+            case AboutFragment.PERMISSION_INSERT: {
+                if (grantResults.length > 0 && (grantResults[0] ==
+                        PackageManager.PERMISSION_GRANTED)) {
+                    Intent intent = new Intent(Intent.ACTION_INSERT);
+                    intent.setType(ContactsContract.Contacts.CONTENT_TYPE);
+                    intent.putExtra(ContactsContract.Intents.Insert.NAME, AboutFragment.name);
+                    intent.putExtra(ContactsContract.Intents.Insert.EMAIL, AboutFragment.email);
+                    intent.putExtra(ContactsContract.Intents.Insert.PHONE, AboutFragment.phone);
+
+                    if (intent.resolveActivity(getPackageManager()) != null) {
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Cannot find any eligible software to perform this task", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    //disable button
+
+                }
+                break;
+            }
+
         }
     }
 }
