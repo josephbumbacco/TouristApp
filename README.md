@@ -8,6 +8,16 @@ This app allows users to either choose, or randomly find a popular location loca
 
 Android Studio
 
+## Installation
+ 
+  Clone the project to your device.
+  ```
+  username@workstationname:~$ git clone https://github.com/josephbumbacco/TouristApp.git
+  ```
+  Or you may download the **.zip** file.
+  
+  Load the project inside of Android Studio.
+
 ## Mockup
 
 ![Navigation](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/MenuScreen.png)
