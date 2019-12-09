@@ -4,6 +4,10 @@ TourGuide is a sightseeing app aimed at helping Tourists find hotspots in Windso
 
 This app allows users to either choose, or randomly find a popular location local to Windsor and have directions given to them.
 
+## Technology
+
+Android Studio
+
 ## Mockup
 
 ![Navigation](https://github.com/josephbumbacco/TouristApp/blob/ReadMe/app/src/images/MenuScreen.png)
@@ -23,3 +27,7 @@ This app allows users to either choose, or randomly find a popular location loca
 | -------------    | --------------------------------------------------- | ----------------------------------- |
 | Joe Bumbacco     | [josephbumbacco](https://github.com/josephbumbacco) | joseph.bumbacco01@stclairconnect.ca |
 | Drew Brooks      | [drewbrooks](https://github.com/DrewBrooks)         | w0726128@myscc.ca                   |
+
+## License
+
+This project is licensed under the MIT License - see the ![license.md](https://github.com/josephbumbacco/TouristApp/blob/master/LICENSE) file for details.
